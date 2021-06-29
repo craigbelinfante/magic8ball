@@ -15,7 +15,7 @@ class _ballViewController: UIViewController {
     
     
     
-    var fortune = "Tap for an Answer"
+    var fortune = "Tap or Shake for an Answer"
     var answers = [ "It is certain", "It is decidedly so", "Without a doubt", "Yes definitely", "You may rely on it", "As I see it, yes", "Most likely", "Outlook good", "Yes", "Signs point to yes", "Try again", "Ask again later", "Better not tell you now", "Cannot predict", "Concentrate and ask again", "Don't count on it", "No", "My sources say no", "Very doubtful"]
     
     override func viewDidLoad() {
@@ -24,13 +24,25 @@ class _ballViewController: UIViewController {
         setupLabelTap()
     }
     
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?){
+        if motion == .motionShake {
+            let results = answers.randomElement()!
+            answersLabel.text = results
+            animate(answersLabel)
+        }
+    }
+    
     private func setupViews() {
         answersLabel.text = fortune
     }
     
     
     @objc func actionTapped(_ sender: UITapGestureRecognizer) {
-        let results = answers.randomElement()!
+       let results = answers.randomElement()!
         answersLabel.text = results
         animate(answersLabel)
     }//
