@@ -7,7 +7,7 @@ An application exactly like the magic 8 ball
 
 ## Features
 
-- I added a rotation animation using Core Animation features. 
+- I added a rotation animation using Core Animation features  
 - I used motion shake feature for users to get answers
 
 ## Upcoming Features
