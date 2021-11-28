@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3P8-O0-FnS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="150" image="magicBall" translatesAutoresizingMaskIntoConstraints="NO" id="qZK-yr-xTY">
-                                <rect key="frame" x="20" y="50.5" width="374" height="150"/>
+                                <rect key="frame" x="132" y="44" width="150" height="94"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzC-Bx-zby">
-                                <rect key="frame" x="20" y="418" width="374" height="60"/>
+                                <rect key="frame" x="20" y="188" width="374" height="435"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -29,27 +30,72 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DzC-Bx-zby" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="E1O-Kc-k9Y"/>
-                            <constraint firstItem="DzC-Bx-zby" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LT2-B2-0SX"/>
-                            <constraint firstItem="DzC-Bx-zby" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RH5-dL-rKH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qZK-yr-xTY" secondAttribute="bottom" constant="661.5" id="gyf-r1-Ifc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DzC-Bx-zby" secondAttribute="trailing" constant="20" id="hdB-sB-41g"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qZK-yr-xTY" secondAttribute="trailing" constant="20" id="iO9-r4-7zK"/>
-                            <constraint firstItem="qZK-yr-xTY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6.5" id="pfr-kX-v0Q"/>
-                            <constraint firstItem="qZK-yr-xTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="q3J-rl-Sxr"/>
+                            <constraint firstItem="DzC-Bx-zby" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3Rs-oa-DsB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DzC-Bx-zby" secondAttribute="trailing" constant="20" id="6wG-ZI-RA8"/>
+                            <constraint firstItem="qZK-yr-xTY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AU6-kZ-rPe"/>
+                            <constraint firstItem="DzC-Bx-zby" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="144" id="EtA-oG-xpp"/>
+                            <constraint firstItem="DzC-Bx-zby" firstAttribute="top" secondItem="qZK-yr-xTY" secondAttribute="bottom" constant="50" id="Glt-Qd-4he"/>
+                            <constraint firstItem="qZK-yr-xTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="QLe-UJ-7Xd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DzC-Bx-zby" secondAttribute="bottom" constant="141" id="ct8-pe-AeI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qZK-yr-xTY" secondAttribute="trailing" constant="132" id="xxK-2C-LHA"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="WsN-LL-f6H"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="answersLabel" destination="DzC-Bx-zby" id="kSX-wq-c8b"/>
+                        <outlet property="homeButton" destination="WsN-LL-f6H" id="YjO-mW-Oqk"/>
                         <outlet property="magicBall" destination="qZK-yr-xTY" id="1qd-mh-zwW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13.043478260869566" y="83.705357142857139"/>
+            <point key="canvasLocation" x="2020" y="-138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Owc-d9-QfQ">
+            <objects>
+                <viewController id="D4s-qQ-qBG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Hi-Fs-nZf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fxO-7l-TeH"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" selectedImage="person" id="g9A-QT-EJO">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVd-bW-k0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041" y="545"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Gs6-ZL-UK6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3P8-O0-FnS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="2D2-wJ-Xks">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="btz-B9-jSP"/>
+                        <segue destination="D4s-qQ-qBG" kind="relationship" relationship="viewControllers" id="wkZ-B9-EaS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lz-lX-qkI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149" y="84"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="magicBall" width="373" height="373"/>
+        <image name="person" catalog="system" width="128" height="117"/>
     </resources>
 </document>

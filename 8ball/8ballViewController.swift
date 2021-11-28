@@ -12,8 +12,10 @@ class _ballViewController: UIViewController {
     
     @IBOutlet weak var magicBall: UIImageView!
     @IBOutlet weak var answersLabel: UILabel!
+    @IBOutlet weak var homeButton: UITabBarItem!
     
     
+    private var animator: UIViewPropertyAnimator?
     
     var fortune = "Tap or Shake for an Answer"
     var answers = [ "It is certain", "It is decidedly so", "Without a doubt", "Yes definitely", "You may rely on it", "As I see it, yes", "Most likely", "Outlook good", "Yes", "Signs point to yes", "Try again", "Ask again later", "Better not tell you now", "Cannot predict", "Concentrate and ask again", "Don't count on it", "No", "My sources say no", "Very doubtful"]
@@ -27,13 +29,14 @@ class _ballViewController: UIViewController {
     override func becomeFirstResponder() -> Bool {
         return true
     }
-
+    
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?){
         if motion == .motionShake {
             let results = answers.randomElement()!
             answersLabel.text = results
             animate(answersLabel)
         }
+        magicBall.rotate()
     }
     
     private func setupViews() {
@@ -42,9 +45,10 @@ class _ballViewController: UIViewController {
     
     
     @objc func actionTapped(_ sender: UITapGestureRecognizer) {
-       let results = answers.randomElement()!
+        let results = answers.randomElement()!
         answersLabel.text = results
         animate(answersLabel)
+        magicBall.rotate()
     }//
     
     @objc func animate(_ sender: UILabel) {
@@ -61,15 +65,6 @@ class _ballViewController: UIViewController {
         self.answersLabel.addGestureRecognizer(labelTap)
     }//
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }
 
 // MARK: 8 Ball Animation
@@ -82,7 +77,7 @@ extension UIView {
         rotation.toValue = NSNumber(value: Double.pi * 2)
         rotation.duration = 1
         rotation.isCumulative = true
-        rotation.repeatCount = Float.greatestFiniteMagnitude
+       // rotation.repeatCount = Float.greatestFiniteMagnitude
         self.layer.add(rotation, forKey: "rotationAnimation")
     }
     
