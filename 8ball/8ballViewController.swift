@@ -12,10 +12,6 @@ class _ballViewController: UIViewController {
     
     @IBOutlet weak var magicBall: UIImageView!
     @IBOutlet weak var answersLabel: UILabel!
-    @IBOutlet weak var homeButton: UITabBarItem!
-    
-    
-    private var animator: UIViewPropertyAnimator?
     
     var fortune = "Tap or Shake for an Answer"
     var answers = [ "It is certain", "It is decidedly so", "Without a doubt", "Yes definitely", "You may rely on it", "As I see it, yes", "Most likely", "Outlook good", "Yes", "Signs point to yes", "Try again", "Ask again later", "Better not tell you now", "Cannot predict", "Concentrate and ask again", "Don't count on it", "No", "My sources say no", "Very doubtful"]
@@ -42,7 +38,6 @@ class _ballViewController: UIViewController {
     private func setupViews() {
         answersLabel.text = fortune
     }
-    
     
     @objc func actionTapped(_ sender: UITapGestureRecognizer) {
         let results = answers.randomElement()!

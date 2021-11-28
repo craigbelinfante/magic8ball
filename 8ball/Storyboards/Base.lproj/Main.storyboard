@@ -45,7 +45,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="answersLabel" destination="DzC-Bx-zby" id="kSX-wq-c8b"/>
-                        <outlet property="homeButton" destination="WsN-LL-f6H" id="YjO-mW-Oqk"/>
                         <outlet property="magicBall" destination="qZK-yr-xTY" id="1qd-mh-zwW"/>
                     </connections>
                 </viewController>
