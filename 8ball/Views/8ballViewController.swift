@@ -20,7 +20,9 @@ class _ballViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        setupLabelTap()
+        setupShakeLabelTap()
+        setupAnswersLabelTap()
+        setupMagicBallImageTap()
     }
     
     override func becomeFirstResponder() -> Bool {
@@ -60,10 +62,22 @@ class _ballViewController: UIViewController {
         }
     }//
     
-    private func setupLabelTap() {
+    private func setupShakeLabelTap() {
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.actionTapped(_:)))
         self.tapOrShakeLabel.isUserInteractionEnabled = true
         self.tapOrShakeLabel.addGestureRecognizer(labelTap)
+    }//
+    
+    private func setupAnswersLabelTap() {
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.actionTapped(_:)))
+        self.answersLabel.isUserInteractionEnabled = true
+        self.answersLabel.addGestureRecognizer(labelTap)
+    }//
+    
+    private func setupMagicBallImageTap() {
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(self.actionTapped(_:)))
+        self.magicBall.isUserInteractionEnabled = true
+        self.magicBall.addGestureRecognizer(imageTap)
     }//
     
     // MARK: - Navigation
