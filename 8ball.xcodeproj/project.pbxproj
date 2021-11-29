@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442D93B427536762007EFCE0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442D93B327536762007EFCE0 /* LoginViewController.swift */; };
 		44A1273B2688EE1F006F9995 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A1273A2688EE1F006F9995 /* AppDelegate.swift */; };
 		44A1273D2688EE1F006F9995 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A1273C2688EE1F006F9995 /* SceneDelegate.swift */; };
 		44A127422688EE1F006F9995 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A127402688EE1F006F9995 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		442D93B327536762007EFCE0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		442D93B52753681B007EFCE0 /* 8ball.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 8ball.entitlements; sourceTree = "<group>"; };
 		44A127372688EE1F006F9995 /* 8ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 8ball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A1273A2688EE1F006F9995 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A1273C2688EE1F006F9995 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,9 +59,11 @@
 		44A127392688EE1F006F9995 /* 8ball */ = {
 			isa = PBXGroup;
 			children = (
+				442D93B52753681B007EFCE0 /* 8ball.entitlements */,
 				44A1273A2688EE1F006F9995 /* AppDelegate.swift */,
 				44A1273C2688EE1F006F9995 /* SceneDelegate.swift */,
 				44A1274F2688F0CF006F9995 /* 8ballViewController.swift */,
+				442D93B327536762007EFCE0 /* LoginViewController.swift */,
 				44A1274E2688EE46006F9995 /* Storyboards */,
 				44A127432688EE26006F9995 /* Assets.xcassets */,
 				44A127482688EE26006F9995 /* Info.plist */,
@@ -145,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442D93B427536762007EFCE0 /* LoginViewController.swift in Sources */,
 				44A1273B2688EE1F006F9995 /* AppDelegate.swift in Sources */,
 				44A127502688F0CF006F9995 /* 8ballViewController.swift in Sources */,
 				44A1273D2688EE1F006F9995 /* SceneDelegate.swift in Sources */,
@@ -294,6 +300,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = 8ball/8ball.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VAB23Q8G5;
 				INFOPLIST_FILE = 8ball/Info.plist;
@@ -314,6 +322,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = 8ball/8ball.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VAB23Q8G5;
 				INFOPLIST_FILE = 8ball/Info.plist;

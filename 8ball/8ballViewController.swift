@@ -11,6 +11,7 @@ import UIKit
 class _ballViewController: UIViewController {
     
     @IBOutlet weak var magicBall: UIImageView!
+    @IBOutlet weak var tapOrShakeLabel: UILabel!
     @IBOutlet weak var answersLabel: UILabel!
     
     var fortune = "Tap or Shake for an Answer"
@@ -32,18 +33,23 @@ class _ballViewController: UIViewController {
             answersLabel.text = results
             animate(answersLabel)
         }
-        magicBall.rotate()
+        magicBall.shake(duration: 1)
+        answersLabel.shake(duration: 2)
+        tapOrShakeLabel.text = "Ask Again"
     }
     
     private func setupViews() {
-        answersLabel.text = fortune
+        tapOrShakeLabel.text = fortune
     }
     
     @objc func actionTapped(_ sender: UITapGestureRecognizer) {
         let results = answers.randomElement()!
         answersLabel.text = results
         animate(answersLabel)
-        magicBall.rotate()
+        magicBall.shake(duration: 1)
+        answersLabel.shake(duration: 2)
+        
+        tapOrShakeLabel.text = "Ask Again"
     }//
     
     @objc func animate(_ sender: UILabel) {
@@ -56,9 +62,14 @@ class _ballViewController: UIViewController {
     
     private func setupLabelTap() {
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.actionTapped(_:)))
-        self.answersLabel.isUserInteractionEnabled = true
-        self.answersLabel.addGestureRecognizer(labelTap)
+        self.tapOrShakeLabel.isUserInteractionEnabled = true
+        self.tapOrShakeLabel.addGestureRecognizer(labelTap)
     }//
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
     
 }
 
@@ -66,13 +77,13 @@ class _ballViewController: UIViewController {
 
 extension UIView {
     private static let kRotationAnimationKey = "rotationanimationkey"
-    
+ /*
     func rotate() {
         let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotation.toValue = NSNumber(value: Double.pi * 2)
         rotation.duration = 1
         rotation.isCumulative = true
-       // rotation.repeatCount = Float.greatestFiniteMagnitude
+        // rotation.repeatCount = Float.greatestFiniteMagnitude
         self.layer.add(rotation, forKey: "rotationAnimation")
     }
     
@@ -81,4 +92,21 @@ extension UIView {
             layer.removeAnimation(forKey: UIView.kRotationAnimationKey)
         }
     }
+ */
+    func shake(duration: CFTimeInterval) {
+        let shakeValues = [-5, 5, -5, 5, -3, 3, -2, 2, 0]
+        
+        let translation = CAKeyframeAnimation(keyPath: "transform.translation.x");
+        translation.timingFunction = CAMediaTimingFunction(name: .linear)
+        translation.values = shakeValues
+        
+        let rotation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+        rotation.values = shakeValues.map { (Int(Double.pi) * $0) / 180 }
+        
+        let shakeGroup = CAAnimationGroup()
+        shakeGroup.animations = [translation, rotation]
+        shakeGroup.duration = 1.0
+        layer.add(shakeGroup, forKey: "shakeIt")
+    }
+    
 }

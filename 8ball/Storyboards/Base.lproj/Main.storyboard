@@ -16,13 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="150" image="magicBall" translatesAutoresizingMaskIntoConstraints="NO" id="qZK-yr-xTY">
-                                <rect key="frame" x="132" y="44" width="150" height="94"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzC-Bx-zby">
-                                <rect key="frame" x="20" y="188" width="374" height="435"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <rect key="frame" x="20" y="109" width="374" height="104"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="150" image="magicBall" translatesAutoresizingMaskIntoConstraints="NO" id="qZK-yr-xTY">
+                                <rect key="frame" x="20" y="249" width="374" height="399"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="399" id="vSB-m5-3MP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCO-2x-ecc">
+                                <rect key="frame" x="143" y="389" width="129" height="85"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -30,46 +39,64 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DzC-Bx-zby" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3Rs-oa-DsB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DzC-Bx-zby" secondAttribute="trailing" constant="20" id="6wG-ZI-RA8"/>
-                            <constraint firstItem="qZK-yr-xTY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AU6-kZ-rPe"/>
-                            <constraint firstItem="DzC-Bx-zby" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="144" id="EtA-oG-xpp"/>
-                            <constraint firstItem="DzC-Bx-zby" firstAttribute="top" secondItem="qZK-yr-xTY" secondAttribute="bottom" constant="50" id="Glt-Qd-4he"/>
-                            <constraint firstItem="qZK-yr-xTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="QLe-UJ-7Xd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DzC-Bx-zby" secondAttribute="bottom" constant="141" id="ct8-pe-AeI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qZK-yr-xTY" secondAttribute="trailing" constant="132" id="xxK-2C-LHA"/>
+                            <constraint firstItem="ZCO-2x-ecc" firstAttribute="height" secondItem="qZK-yr-xTY" secondAttribute="height" multiplier="0.213033" id="99I-9p-V9k"/>
+                            <constraint firstItem="qZK-yr-xTY" firstAttribute="height" secondItem="DzC-Bx-zby" secondAttribute="height" multiplier="3.83654" id="Bfl-JL-hZF"/>
+                            <constraint firstItem="DzC-Bx-zby" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="Bgj-UA-sk6"/>
+                            <constraint firstItem="qZK-yr-xTY" firstAttribute="top" secondItem="ZCO-2x-ecc" secondAttribute="bottom" constant="-225" id="Y6V-yz-tft"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZCO-2x-ecc" secondAttribute="trailing" constant="142" id="aZu-ky-Ko6"/>
+                            <constraint firstItem="qZK-yr-xTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="d78-jZ-Jyj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DzC-Bx-zby" secondAttribute="trailing" constant="20" id="goS-JN-xwO"/>
+                            <constraint firstItem="qZK-yr-xTY" firstAttribute="top" secondItem="DzC-Bx-zby" secondAttribute="bottom" constant="36" id="hse-aA-vSc"/>
+                            <constraint firstItem="ZCO-2x-ecc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="o1K-gl-eEP"/>
+                            <constraint firstItem="DzC-Bx-zby" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rwe-xK-WZj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qZK-yr-xTY" secondAttribute="trailing" constant="20" id="wes-gv-Kje"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="WsN-LL-f6H"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="answersLabel" destination="DzC-Bx-zby" id="kSX-wq-c8b"/>
+                        <outlet property="answersLabel" destination="ZCO-2x-ecc" id="1jr-vV-JKJ"/>
                         <outlet property="magicBall" destination="qZK-yr-xTY" id="1qd-mh-zwW"/>
+                        <outlet property="tapOrShakeLabel" destination="DzC-Bx-zby" id="mGX-tW-agc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="-138"/>
+            <point key="canvasLocation" x="2018.840579710145" y="-138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Owc-d9-QfQ">
             <objects>
-                <viewController id="D4s-qQ-qBG" sceneMemberID="viewController">
+                <viewController id="D4s-qQ-qBG" customClass="LoginViewController" customModule="_ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Hi-Fs-nZf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tWG-wB-rSF">
+                                <rect key="frame" x="40" y="373" width="334" height="151"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fxO-7l-TeH"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fxO-7l-TeH" firstAttribute="trailing" secondItem="tWG-wB-rSF" secondAttribute="trailing" constant="40" id="06i-qA-v5A"/>
+                            <constraint firstItem="tWG-wB-rSF" firstAttribute="leading" secondItem="fxO-7l-TeH" secondAttribute="leading" constant="40" id="1IY-N4-XKn"/>
+                            <constraint firstItem="tWG-wB-rSF" firstAttribute="top" secondItem="fxO-7l-TeH" secondAttribute="top" constant="329" id="CE9-zk-u1R"/>
+                            <constraint firstItem="fxO-7l-TeH" firstAttribute="bottom" secondItem="tWG-wB-rSF" secondAttribute="bottom" constant="289" id="cEK-rd-hdu"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" selectedImage="person" id="g9A-QT-EJO">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="loginProviderStackView" destination="tWG-wB-rSF" id="XMb-fo-Sfz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVd-bW-k0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="545"/>
+            <point key="canvasLocation" x="2040.5797101449277" y="543.75"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gs6-ZL-UK6">
@@ -83,8 +110,8 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="btz-B9-jSP"/>
-                        <segue destination="D4s-qQ-qBG" kind="relationship" relationship="viewControllers" id="wkZ-B9-EaS"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" destinationCreationSelector="homeVC" id="btz-B9-jSP"/>
+                        <segue destination="D4s-qQ-qBG" kind="relationship" relationship="viewControllers" destinationCreationSelector="loginVC" id="wkZ-B9-EaS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lz-lX-qkI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -94,7 +121,7 @@
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="magicBall" width="373" height="373"/>
+        <image name="magicBall" width="860" height="912"/>
         <image name="person" catalog="system" width="128" height="117"/>
     </resources>
 </document>
