@@ -2,18 +2,19 @@
 An application exactly like the magic 8 ball
 
 <p align="row">
-<img src= "https://media.giphy.com/media/XKnvtPe4TqGSu9xD5w/giphy.gif" width="400" >
+<img src= "https://media.giphy.com/media/SB9L0m57zUGckDRALS/giphy.gif" width="400" >
 </p>
 
 ## Features
 
-- I added a rotation animation using Core Animation features  
+- I added a shake animation using Core Animation features  
 - I used motion shake feature for users to get answers
+- Login with Apple ID
 
 ## Upcoming Features
 
 - Login page through Apple ID
-- Updated image with new rotation features and infinite rotation for UITapGestures
+- Updated rotation features and infinite rotation for UITapGestures
 
 ## Requirements
 

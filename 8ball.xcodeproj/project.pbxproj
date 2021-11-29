@@ -40,6 +40,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		442D93B627549EF5007EFCE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44A1274F2688F0CF006F9995 /* 8ballViewController.swift */,
+				442D93B327536762007EFCE0 /* LoginViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		44A1272E2688EE1F006F9995 = {
 			isa = PBXGroup;
 			children = (
@@ -62,8 +71,7 @@
 				442D93B52753681B007EFCE0 /* 8ball.entitlements */,
 				44A1273A2688EE1F006F9995 /* AppDelegate.swift */,
 				44A1273C2688EE1F006F9995 /* SceneDelegate.swift */,
-				44A1274F2688F0CF006F9995 /* 8ballViewController.swift */,
-				442D93B327536762007EFCE0 /* LoginViewController.swift */,
+				442D93B627549EF5007EFCE0 /* Views */,
 				44A1274E2688EE46006F9995 /* Storyboards */,
 				44A127432688EE26006F9995 /* Assets.xcassets */,
 				44A127482688EE26006F9995 /* Info.plist */,
